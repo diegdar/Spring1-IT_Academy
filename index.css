@@ -13,33 +13,40 @@ body{
 body *{  /* permite mostrar las cajas aunque no haya texto */
     min-height: 5px;
 }
+:root{
+    --Alto--articles: 24px;
+    --padding--hijos: 24px;
+}
 .mother{
     max-width: 1200px;
     margin: auto;
+    
 }
 .mother div{
-    margin: 5px;
+    margin: 16px;
     display: flex;
     justify-content: space-around;
     background-color: black;
-    padding: 6px;
+    padding: 18px;
 
 }
-/* Primer container */
+/* Primer container ------------*/
 .cont1{
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 8px;
+    /* height: 25vh; */
 }
 .cont1_ch1{
     background-color: #2d4059;
     display: flex;
     align-items: center;
+    padding: var(--padding--hijos);
 }
 .cont1_ch1 article{
     background-color: #ea5455;
     margin: 6px;
-    height: 7px;
+    height: var(--Alto--articles);
 }
 .cont1_ch1 :nth-child(2){
     width: 70%;
@@ -52,23 +59,23 @@ body *{  /* permite mostrar las cajas aunque no haya texto */
 }
 .cont1_ch2{
     background-color: #f07b3f;
-    height: 23px;
     display: flex;
     align-items: center;
+    padding: var(--padding--hijos);
 }
 .cont1_ch2 :nth-child(1){
     background-color: #fed460;
     width: 100%;
     margin: 5px;
-    height: 7px;
+    height: var(--Alto--articles);
 }
-/* Segundo container */
+/* Segundo container ----------*/
 .cont2{
     display: flex;
     padding: 5px;
-    gap: 5px;
+    gap: 15px;
+    /* height: 60vh; */
 }
-
 .cont2_ch1{
     background-color: #4d4d68;
     width: 70%;
@@ -76,10 +83,11 @@ body *{  /* permite mostrar las cajas aunque no haya texto */
     flex-wrap: wrap;
     gap: 3px;
     align-items: center;
-    padding: 5px;
+    padding: var(--padding--hijos);
 }
     .cont2_ch1 article{
-        height: 6px;
+        height: var(--Alto--articles);
+        margin: 10px;
     }
         /* Solo afecta a los 4 primeros elemento */
     .cont2_ch1 :nth-child(-n+4){ 
@@ -100,13 +108,20 @@ body *{  /* permite mostrar las cajas aunque no haya texto */
     flex-direction: column;
     gap: 3px;
     align-items: center;
-    padding: 5px;
+    padding: var(--padding--hijos);
 }
     .cont2_ch2 article{
         background-color: #feea85;
         width: 100%;
+        height: var(--Alto--articles);
+        margin: 10px;
     }
+/* Tercer container --------- */
+.cont3{
+    padding: var(--padding--hijos);
+}
 .cont3_ch1{
     background-color: #e6af2e;
     width: 100%;
+    height: var(--Alto--articles);
 }
