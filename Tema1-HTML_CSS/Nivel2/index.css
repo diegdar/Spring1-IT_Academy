@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+body *{  /* permite mostrar las cajas aunque no haya texto */
+    min-height: 5px;
+}
+:root{
+    --Alto--articles: 24px;
+    --padding--hijos: 24px;
+}
+.mother{
+    max-width: 1200px;
+    margin: auto;
+    
+}
+.mother div{
+    margin: 16px;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    padding: 18px;
+
+}
+/* Primer container ------------*/
+.cont1{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* height: 25vh; */
+}
+.cont1_ch1{
+    background-color: #2d4059;
+    display: flex;
+    align-items: center;
+    padding: var(--padding--hijos);
+}
+.cont1_ch1 article{
+    background-color: #ea5455;
+    margin: 6px;
+    height: var(--Alto--articles);
+}
+.cont1_ch1 :nth-child(2){
+    width: 70%;
+}
+.cont1_ch1 :nth-child(1){
+    width: 15%;
+}
+.cont1_ch1 :nth-child(3){
+    width: 15%;
+}
+.cont1_ch2{
+    background-color: #f07b3f;
+    display: flex;
+    align-items: center;
+    padding: var(--padding--hijos);
+}
+.cont1_ch2 :nth-child(1){
+    background-color: #fed460;
+    width: 100%;
+    margin: 5px;
+    height: var(--Alto--articles);
+}
+/* Segundo container ----------*/
+.cont2{
+    display: flex;
+    padding: 5px;
+    gap: 15px;
+    /* height: 60vh; */
+}
+.cont2_ch1{
+    background-color: #4d4d68;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    align-items: center;
+    padding: var(--padding--hijos);
+}
+    .cont2_ch1 article{
+        height: var(--Alto--articles);
+        margin: 10px;
+    }
+        /* Solo afecta a los 4 primeros elemento */
+    .cont2_ch1 :nth-child(-n+4){ 
+        background-color: #1f6cb0;
+        /* width: 75px; */
+        flex-basis: 40%; /* Establece el ancho base de cada columna */
+        flex-grow: 1; /* Permite que las columnas crezcan para llenar el espacio disponible */
+    }
+        /* afecta solo al ultimo elemento */
+    .cont2_ch1 :nth-child(5){ 
+        background-color: #70a3c4;
+        width: 100%;
+    }
+.cont2_ch2{
+    background-color: #f73f52;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: center;
+    padding: var(--padding--hijos);
+}
+    .cont2_ch2 article{
+        background-color: #feea85;
+        width: 100%;
+        height: var(--Alto--articles);
+        margin: 10px;
+    }
+/* Tercer container --------- */
+.cont3{
+    padding: var(--padding--hijos);
+}
+.cont3_ch1{
+    background-color: #e6af2e;
+    width: 100%;
+    height: var(--Alto--articles);
+}
+/* MEDIAQUERYS -------------------------------------- */
+    /* VISUALIZACION TABLETS: ENTRE 321px y 768px  */
+    @media screen and (min-width: 321px) and (max-width: 768px) {
+        /* Cambia el color del segundo container */
+        .mother div:nth-child(2){
+            background-color: #feff03;
+        }
+        .cont2{
+            flex-direction: column;
+        }
+        .cont2_ch1, .cont2_ch2{
+            width: 100%;
+        }        
+    }
+    /* VISUALIZACON MOVIL------------- */
+    @media screen and (max-width: 320px) {
+        .cont1_ch1{
+            flex-direction: column;
+        }   
+            /* hace que todas las barras rojas abarquen el 100% del ancho */
+            .cont1_ch1 :nth-child(n)
+            {
+                width: 100%;
+            }
+        /* Cambia el color del segundo container */
+        .mother div:nth-child(2){
+            background-color: #feff03;
+        }
+        .cont2{
+            flex-direction: column;
+        }
+            .cont2_ch1, .cont2_ch2{
+                width: 100%;
+            }
+            /*cambia el color de las barras azul a verde oscuro */
+            .cont2_ch1 :nth-child(-n+4){
+                background-color: #62959c;
+            } 
+            /* Cambia color barra azul a verde claro */
+            .cont2_ch1 :nth-child(5){ 
+                background-color: #a3ddcb;
+            }
+            /* Cambia color relleno rojo a naranja  */
+            .cont2_ch2{
+                background-color: #fd7b54;
+            }
+            /* cambio colo barra amarilla a naranja */
+            .cont2_ch2 article{
+                background-color: #fdb36b;
+            }
+    }
