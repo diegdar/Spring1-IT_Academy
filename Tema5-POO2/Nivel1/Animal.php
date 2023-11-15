@@ -3,16 +3,6 @@
  -->
  <?php
 
-// pruebas
-    $rambo = new Perro("rambo");
-    echo $rambo->getName() . " es un perro y hace el sonido: " .  $rambo->makeSound();
-
-    echo "<br><br>";
-
-    $misifu = new Gato("misifu");
-    echo $misifu->getName() . " es un gato y hace el sonido: " .  $misifu->makeSound();
-
-
 // Declaracion de las clases
     abstract class Animal{
         protected $name;
@@ -29,17 +19,4 @@
 
     }
 
-    class Gato extends Animal{
-
-        public function makeSound(){
-            return "Miau!";
-        }
-    }
-
-    class Perro extends Animal{
-
-        public function makeSound(){
-            return "Guau!";
-        }
-    }
     
