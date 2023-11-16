@@ -1,0 +1,2 @@
+Como el caso anterior, ahora tendrás que realizar la adaptación a versión Mobile.
+

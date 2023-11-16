@@ -1,0 +1,2 @@
+Crea un array, añádele 5 números enteros y luego muestrales por pantalla de uno en uno.
+

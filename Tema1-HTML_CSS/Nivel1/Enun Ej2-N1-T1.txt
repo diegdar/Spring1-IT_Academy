@@ -1,0 +1,12 @@
+Se debe empezar a preparar la adaptación a diferentes dispositivos, y por eso debes tener claro el concepto de Media Query . Observa que hay cambio de distribución y color de algunos elementos.
+
+
+Para saber más
+
+Acerca de Media Query -> Responsive Web Design - Media Queries
+
+
+Siguiendo con el proyecto anterior, haz la versión por tableta, tal y como indica la siguiente captura:
+
+link enunciado:
+https://itacademy.barcelonactiva.cat/mod/assign/view.php?id=10914

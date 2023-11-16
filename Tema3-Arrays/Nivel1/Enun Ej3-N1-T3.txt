@@ -1,0 +1,6 @@
+Crea una función que reciba como parámetros un array de palabras y un carácter. La función nos devuelve true si todas las palabras del array tienen el carácter pasado como segundo parámetro.
+
+Por ejemplo:
+
+Si tenemos [“hola”, “Php”, “Html”] devolverá true si preguntamos por “h” pero falso si preguntamos por “l”.
+
