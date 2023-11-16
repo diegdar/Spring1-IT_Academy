@@ -13,5 +13,4 @@ $misifu = new Gato("misifu");
 echo $misifu->getName() . " es un gato y hace el sonido: " .  $misifu->makeSound();
 
 
-
 ?>
