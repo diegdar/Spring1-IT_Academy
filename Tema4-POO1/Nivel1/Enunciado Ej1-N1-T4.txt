@@ -1,2 +1,0 @@
-Crea una clase Employee, define como atributos su nombre y sueldo. Definir un método initialize que reciba como parámetros el nombre y sueldo. Plantear un segundo método print que imprima el nombre y un mensaje si debe pagar o no impuestos (si el sueldo supera 6000, paga impuestos).
-
