@@ -16,7 +16,6 @@ Mostrar por pantalla el tamaño del array anterior y posteriormente elimina un e
     unset($x[2]); //elimina un elemento del array
 
     $nuevoArray = [];
-
     // Reorganizacion de claves
     foreach ($x as $posicion => $nombre) {
         $nuevoArray[] = $nombre;

@@ -12,11 +12,11 @@
 <?php
 $numeros = [4,-2, 8, 0, -23];
 
-echo $numeros[0] . "<br>";
-echo $numeros[1] . "<br>";
-echo $numeros[2] . "<br>";
-echo $numeros[3] . "<br>";
-echo $numeros[4] . "<br>";
+foreach($numeros as $valor){
+
+    echo $valor . ", ";
+}
+
 ?>
 </body>
 </html>

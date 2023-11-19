@@ -16,11 +16,11 @@ body *{  /* permite mostrar las cajas aunque no haya texto */
 :root{
     --Alto--articles: 24px;
     --padding--hijos: 24px;
+    --Margin--IzqDerBarras: 3px;
 }
 .mother{
     max-width: 1200px;
     margin: auto;
-    
 }
 .mother div{
     margin: 16px;

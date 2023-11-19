@@ -23,17 +23,16 @@ Si tenemos [“hola”, “Php”, “Html”] devolverá true si preguntamos po
         foreach($nombresMayus as $palabra){ 
             if(strpos($palabra, $caracterMayus) === false){ //comprueba si existe el caracter en la posicion actual del array. Y tiene que ser '===' porque si fuera '==' un valor 0 o null se tomaría como true
                 $seEncuentra=false;
-                break; // Con que no se encuentre una vez saldrá del bucle
             }
         }
         if($seEncuentra){
-            echo "El caracter '$caracter' se encuentra en todas las posicion del array";
+            return print "El caracter '$caracter' se encuentra en todas las posicion del array";
         }else{
-            echo "El caracter '$caracter' NO se encuentra en todas las posicion del array";
+            return print "El caracter '$caracter' NO se encuentra en todas las posicion del array";
         }
     }
 
-    comprueba_Caracter($nombres, "A");
+    comprueba_Caracter($nombres, "m");
     ?>
 </body>
 </html>
