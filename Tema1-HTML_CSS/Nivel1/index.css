@@ -45,7 +45,7 @@ body *{  /* permite mostrar las cajas aunque no haya texto */
 }
 .cont1_ch1 article{
     background-color: #ea5455;
-    margin: 6px;
+    margin: var(--Margin--IzqDerBarras);
     height: var(--Alto--articles);
 }
 .cont1_ch1 :nth-child(2){
@@ -66,7 +66,7 @@ body *{  /* permite mostrar las cajas aunque no haya texto */
 .cont1_ch2 :nth-child(1){
     background-color: #fed460;
     width: 100%;
-    margin: 5px;
+    margin: var(--Margin--IzqDerBarras);
     height: var(--Alto--articles);
 }
 /* Segundo container ----------*/
@@ -87,7 +87,7 @@ body *{  /* permite mostrar las cajas aunque no haya texto */
 }
     .cont2_ch1 article{
         height: var(--Alto--articles);
-        margin: 10px;
+        margin: var(--Margin--IzqDerBarras);
     }
         /* Solo afecta a los 4 primeros elemento */
     .cont2_ch1 :nth-child(-n+4){ 
@@ -108,13 +108,13 @@ body *{  /* permite mostrar las cajas aunque no haya texto */
     flex-direction: column;
     gap: 3px;
     align-items: center;
-    padding: var(--padding--hijos);
+    padding: 27px;
 }
     .cont2_ch2 article{
         background-color: #feea85;
         width: 100%;
         height: var(--Alto--articles);
-        margin: 10px;
+        margin: 3px;
     }
 /* Tercer container --------- */
 .cont3{
