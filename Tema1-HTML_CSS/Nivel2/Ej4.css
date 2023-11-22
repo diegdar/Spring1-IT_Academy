@@ -195,7 +195,7 @@ header section:hover{ /*roll-over: iconos con texto */
     /* VISUALIZACON MOVIL------------- */
     @media screen and (max-width: 420px) {
         #top{
-            max-height: 40vh;
+            max-height: 35vh;
         }
         header{
             font-size: 0.8em;
