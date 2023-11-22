@@ -33,7 +33,7 @@ $notasAlumnos = [
             echo $sumNotasAlumno/5 . "<br>";
             $sumNotasClase += $sumNotasAlumno; //Acumula las notas de cada alumno para calcular la media de la clase 
         }
-        echo "La nota media de la clase es: " . $sumNotasClase/count($array)/5 . "<br>"; //imprime la suma total de las notas de la clase entre el numero de estudiantes y el numero de notas
+        echo "La nota media de la clase es: " . $sumNotasClase/count($array)/5 . "<br>"; //imprime la media de la clase: suma total de las notas de la clase entre el numero de estudiantes y el numero de notas
 
     }
 

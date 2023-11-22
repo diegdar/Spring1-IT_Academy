@@ -1,8 +1,0 @@
-Escribir una función para verificar el grado de un/a estudiante de acuerdo con la nota.
-
-Condiciones:
-
-Si la nota es 60% o más, el grado debería ser Primera División.
-Si la nota está entre el 45% y el 59%, el grado debería ser Segunda División.
-Si la nota está entre 33% a 44%, el grado debería ser Tercera División.
-Si la nota es menor a 33%, el estudiante reprobará.
