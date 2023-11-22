@@ -23,18 +23,18 @@ $notasAlumnos = [
     function mediaNotas($array){
         $sumNotasAlumno=0;
         $sumNotasClase=0;
+        define("NUM_NOTAS", 5);
 
         foreach ($array as $alumno => $notas) {
-            $num_notas = count($notas); //numero de notas de cada alumno que permite ser mas flexible y comprensible el codigo por si cada alumno tiene un numero diferente de notas en el futuro
             $sumNotasAlumno = 0; // Reinicia la variable en cada iteración para el siguiente alumno
             echo "Las nota media del alumno: " . $alumno . " es: ";
             foreach ($notas as $nota) {
                 $sumNotasAlumno += $nota; //Acumula las notas del alumno actual
             }
-            echo $sumNotasAlumno/$num_notas . "<br>";
+            echo $sumNotasAlumno/NUM_NOTAS . "<br>";
             $sumNotasClase += $sumNotasAlumno; //Acumula las notas de cada alumno para calcular la media de la clase 
         }
-        echo "La nota media de la clase es: " . $sumNotasClase/count($array)/$num_notas . "<br>"; //imprime la media de la clase: suma total de las notas de la clase entre el numero de estudiantes y el numero de notas
+        echo "La nota media de la clase es: " . $sumNotasClase/count($array)/NUM_NOTAS . "<br>"; //imprime la media de la clase: suma total de las notas de la clase entre el numero de estudiantes y el numero de notas
 
     }
 
