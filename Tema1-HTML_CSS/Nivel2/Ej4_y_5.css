@@ -6,8 +6,7 @@
 }
 body{
     color: black;
-    font-weight: bold;
-    text-align: center;
+    /* text-align: center; */
 }
 
 body *{  /* permite mostrar las cajas aunque no haya texto */
@@ -26,12 +25,12 @@ body *{  /* permite mostrar las cajas aunque no haya texto */
     margin: 16px;
     display: flex;
     justify-content: space-around;
-    /* background-color: black; */
+    background-color: #d8d7d7;
     padding: 5px 5px;
 
 }
-/* container Top: ---------------------------------------*/
-#top{
+/* container cont1: ---------------------------------------*/
+#cont1{
     display: flex;
     flex-direction: column;
     gap: 3px;
@@ -93,8 +92,8 @@ header section:hover{ /*roll-over: iconos con texto */
 #socialMedia section{
     margin: 0 5px;
 }
-/*Main Top-------------  */
-#main_top{
+/* cont1 Main -------------  */
+#main_cont1{
     /* background-color: #f07b3f; */
     display: flex;
     align-items: center;
@@ -103,74 +102,104 @@ header section:hover{ /*roll-over: iconos con texto */
     opacity: 0.7;
     margin: 0 35px;
 }
-#main_top :nth-child(1){
+#main_cont1 :nth-child(1){
     width: 100%;
     margin: var(--Margin--IzqDerBarras);
     height: var(--Alto--articles);
 }
-#main_top h3{
+#main_cont1 h3{
     color:#fd7b54;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
 }
-/* Segundo container ----------*/
+/* Segundo container ----------------*/
 .cont2{
     display: flex;
     padding: 5px;
     gap: 15px;
     /* height: 60vh; */
 }
-.cont2_ch1{
-    background-color: #4d4d68;
-    width: 70%;
+.cont2_main{
+    background-color: #d8d7d7;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
-    gap: 3px;
+    gap: 5px;
     align-items: center;
     padding: var(--padding--hijos);
 }
-    .cont2_ch1 article{
-        height: var(--Alto--articles);
+    .cont2_main article{
         margin: var(--Margin--IzqDerBarras);
+        padding: 7px;
+    }
+    .cont2_main img{
+        width:100%;
     }
         /* Solo afecta a los 4 primeros elemento */
-    .cont2_ch1 :nth-child(-n+4){ 
-        background-color: #1f6cb0;
-        /* width: 75px; */
-        flex-basis: 40%; /* Establece el ancho base de cada columna */
-        flex-grow: 1; /* Permite que las columnas crezcan para llenar el espacio disponible */
+    .articulos{ 
+        background-color: #f5f1f1;
+        /* Establece el ancho base de cada columna */
+        flex-basis: 40%; 
+        /* Permite que las columnas crezcan para llenar el espacio disponible */
+        flex-grow: 1; 
+    }
+    .cont2_main .titul_art {
+        background-color: #f08080;
+        text-align: left;
+        color: white;
+        font-weight: bold;
+        font-size: 1.3em;
+        padding: 5px 0 0 3px;
     }
         /* afecta solo al ultimo elemento */
-    .cont2_ch1 :nth-child(5){ 
-        background-color: #70a3c4;
+    .cont2_main :nth-child(5){ 
         width: 100%;
+        text-align: center;
     }
-.cont2_ch2{
-    background-color: #f73f52;
-    width: 30%;
+    .parrafo p{
+        padding: 13px;
+        /* Divide el contenido en dos columnas */
+        column-count: 2; /* Nº columnas que divide el parrafo */
+        column-gap: 20px; /* Espacio entre las columnas */
+    }      
+      .read-more {
+        color: #d8d7d7;
+        padding: 5px 10px;
+        color: black;
+        text-decoration: none;
+      }
+.cont2_aside{
+    background-color: #d8d7d7;
+    width: 20%;
     display: flex;
     flex-direction: column;
     gap: 3px;
     align-items: center;
-    padding: 27px;
+    padding: 15px;
 }
-    .cont2_ch2 article{
-        background-color: #feea85;
+    .cont2_aside article{
         width: 100%;
         height: var(--Alto--articles);
         margin: 3px;
+    }
+    .cont2_aside *{
+        text-align: center;
     }
 /* Tercer container --------- */
 .cont3{
     padding: var(--padding--hijos);
 }
-.cont3_ch1{
-    background-color: #e6af2e;
+.cont3_footer{
+    background-color: #f5f1f1;
     width: 100%;
     height: var(--Alto--articles);
+    text-align: center;
 }
 /* MEDIAQUERYS -------------------------------------- */
     /* VISUALIZACION TABLETS: ENTRE 321px y 768px  */
     @media screen and (min-width: 321px) and (max-width: 525px) {
-        #top{
+        #cont1{
             max-height: 40vh;
         }
         header{
@@ -179,7 +208,7 @@ header section:hover{ /*roll-over: iconos con texto */
             gap: 20px;
             margin-bottom: 40px;
         } 
-        #main_top  h3{
+        #main_cont1  h3{
             font-size: 1em;
         }
         .mother div:nth-child(2){
@@ -188,13 +217,17 @@ header section:hover{ /*roll-over: iconos con texto */
         .cont2{
             flex-direction: column;
         }
-        .cont2_ch1, .cont2_ch2{
+        .cont2_main, .cont2_aside{
             width: 100%;
-        }        
+        }  
+        .cont2_aside{
+            min-height: 150px;
+        }      
     }
     /* VISUALIZACON MOVIL------------- */
     @media screen and (max-width: 420px) {
-        #top{
+    /* Primer Contenedor: Top */
+        #cont1{
             max-height: 35vh;
         }
         header{
@@ -203,33 +236,35 @@ header section:hover{ /*roll-over: iconos con texto */
             gap: 20px;
             margin-bottom: 40px;
         } 
-        #main_top  h3{
+        #main_cont1  h3{
             font-size: 1em;
         }
         /* Cambia el color del segundo container */
         .mother div:nth-child(2){
             background-color: #feff03;
         }
+    /* 2do Contenedor ---------------- */
         .cont2{
             flex-direction: column;
         }
-            .cont2_ch1, .cont2_ch2{
+            .cont2_main, .cont2_aside{
                 width: 100%;
             }
             /*cambia el color de las barras azul a verde oscuro */
-            .cont2_ch1 :nth-child(-n+4){
+            .cont2_main :nth-child(-n+4){
                 background-color: #62959c;
             } 
             /* Cambia color barra azul a verde claro */
-            .cont2_ch1 :nth-child(5){ 
+            .cont2_main :nth-child(5){ 
                 background-color: #a3ddcb;
             }
             /* Cambia color relleno rojo a naranja  */
-            .cont2_ch2{
+            .cont2_aside{
                 background-color: #fd7b54;
+                min-height: 150px;
             }
             /* cambio colo barra amarilla a naranja */
-            .cont2_ch2 article{
+            .cont2_aside article{
                 background-color: #fdb36b;
             }
     }
