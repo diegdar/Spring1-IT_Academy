@@ -15,17 +15,15 @@ Si la nota está entre el 45% y el 59%, el grado debería ser Segunda División.
 Si la nota está entre 33% a 44%, el grado debería ser Tercera División.
 Si la nota es menor a 33%, el estudiante reprobará. -->
 <?php
-    function gradoEstudiante($grado){
+    function gradoEstudiante(int $grado): void{
         if($grado>=60){
             echo "El estudiante tiene un grado de Primera División";
-        }else if($grado>=45 && $grado<=59){
+        }else if($grado>=45){ //como se cumple la anterior condicion en este evaluara las notas entre 59 y 45
             echo "El estudiante tiene un grado de Segunda División";
-        }else if($grado>=33 && $grado<=44){
+        }else if($grado>=33){//como se cumple la anterior condicion en este evaluara las notas entre 44 y 33
             echo "El estudiante tiene un grado de Tercera División";
-        }else if($grado<33){
-            echo "El estudiante ha suspendido!";
         }else{
-            echo "debe introducir un valor entre 0 y 100";
+            echo "El estudiante ha suspendido!";
         }
     }
 
