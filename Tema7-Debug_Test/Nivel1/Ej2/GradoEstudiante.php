@@ -16,9 +16,9 @@ Si la nota es menor a 33%, el estudiante reprobará. -->
                 return "debe introducir un valor entre 0 y 100";
             } else if($nota >= 60){
                 return "Tiene un grado de Primera División";
-            } else if($nota >= 45 && $nota <= 59){
+            } else if($nota >= 45){
                 return "Tiene un grado de Segunda División";
-            } else if($nota >= 33 && $nota <= 44){
+            } else if($nota >= 33){
                 return "Tiene un grado de Tercera División";
             } else if($nota < 33){
                 return "El estudiante ha suspendido!";

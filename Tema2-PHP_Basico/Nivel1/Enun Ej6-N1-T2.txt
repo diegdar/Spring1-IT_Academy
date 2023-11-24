@@ -1,0 +1,7 @@
+Charlie me mordió el dedo! Charlie te morderá el dedo exactamente el 50% del tiempo.
+
+Escribe La función isBitten () que devuelve TRUE con un 50% de probabilidad y FALSE de lo contrario.
+Importante
+
+Consejo: puede que la función rand () te resulte útil.
+
