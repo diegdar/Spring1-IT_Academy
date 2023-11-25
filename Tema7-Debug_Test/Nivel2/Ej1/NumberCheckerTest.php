@@ -16,9 +16,10 @@ class NumberCheckerTest extends TestCase{
 
     protected function tearDown(): void{ //elimina el objeto para liberar recursos
         $this->numberChecked = null;
-    }
+    } 
+    // ⚠️Los metodos Setup() y teaDown : son útiles para garantizar que cada test se ejecute en un entorno limpio. Esto ayuda a evitar que los resultados de un test se vean afectados por los resultados de otro test.
 
-    public static function IsEvenDataProvider(){ //cada array es un  test para el metodo 'IsEven'
+    public static function IsEvenDataProvider(): array{ //cada array es un  test para el metodo 'IsEven'
         return array(
             array(3, false), //valor a probar, resultado que debe dar
             array(6, true),
@@ -37,7 +38,7 @@ class NumberCheckerTest extends TestCase{
         return array(
             array(8, true),
             array(-12, false),
-            array(-8, true),
+            array(-8, false),
         );
     }
     /**
