@@ -19,26 +19,27 @@ class PokerDice{
         echo "\n <br>"; 
     }    
 
-    function tirarCincoDados(){
-        for($i=0; $i<5; $i++){
-            $nuevoDado = new PokerDice(); //crea cada dado
-            echo "Dado " .  ($i+1) . ": "; //Imprime el numero de dado que corresponde a cada figura
-            $nuevoDado->shapeName(); //imprime al figura del dado nuevo
-        }
-    }
-
     public function getTotalThrows(){ 
         return self::$totalThrows;
     }
     
 }
 
+function tirarCincoDados(){
+    for($i=0; $i<5; $i++){
+        $nuevoDado = new PokerDice(); //crea cada dado
+        echo "Dado " .  ($i+1) . ": "; //Imprime el numero de dado que corresponde a cada figura
+        $nuevoDado->shapeName(); //imprime al figura del dado nuevo
+    }
+}
 
 $tirada = new PokerDice();
 
 $tirada->shapeName();
 $tirada->shapeName();
 
-$tirada->tirarCincoDados();
+
+tirarCincoDados();
+
 
 echo "El número total de tiradas fueron: " . $tirada->getTotalThrows();

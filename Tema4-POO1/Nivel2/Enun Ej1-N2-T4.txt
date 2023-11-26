@@ -7,3 +7,13 @@ Crea también el método shapeName, que diga cuál es la figura que ha salido en
 Realiza una aplicación que permita echar cinco dados de póquer a la vez.
 
 Además, programa el método getTotalThrows que debe mostrar el número total de tiradas entre todos los dados.
+
+************Comentarios Profesor:
+1º*Sería interesante separar el acto de echar un dado (con los cambios que eso supone) y de mostrar su cara. Estudia e implementa cómo afectaría eso a tu clase Dice. 
+    -Pregunta❓: No entiendo cuando dices de separar el acto de echar un dado con el de mostrar su cara. Ya esta asi, no? por un lado tenemos el metodo throw() que tira el dado(escoge una de las caras aleatoriamente y lo guarda en la variable $valorAleatorio) y por otro el metodo shapeName() que lo imprime la cara del dado.
+
+2º*La clase que has modelado representa un único dado. Es un poco raro que haya un método que cree 5 dados y los eche. Piensa si ese es realmente el sitio para hacerlo.
+    -Ok, te entendi. No hace falta tener este metodo dentro de la clase cuando se puede crear uno fuera de la clase con el mismo codigo.
+
+3º*Me ha dejado un poco loco que compruebes si existe caras en el constructor. Cada vez que instancias un dado se tendrá que crear una referencia a caras, ya que la declaras como static, luego creo que no sería necesaria esa lógica en el constructor. 
+	- Esto lo habia hecho para no crear un nuevo array cada vez que se instanciaba el objeto PokerDice, pero con tu comentario me di cuenta que si doy estos valores a los atributos fuera de la clase ya evito esto.
