@@ -2,20 +2,12 @@
 
 class PokerDice{
 
-    protected static $caras; //al ser static hace que cada instancia compartan la misma copia del array
-    protected static $totalThrows; //la convertimos en static para que recoja cada valor
-
-    public function __construct()
-    {
-        if(!isset(self::$caras)){ // si la propiedad $caras no esta definida  le asigna el valor del array, asi solo crea un array aunque haya varias instancias del objeto
-            self::$caras = ["As", "K", "Q2", "J", "7", "8"];
-            self::$totalThrows = 0;
-        }
-    }
+    protected $caras=["As", "K", "Q2", "J", "7", "8"]; 
+    protected static $totalThrows= 0; //la convertimos en static para que recoja cada valor en cada tirada
 
     public function throw(){
-        $indiceAleatorio = array_rand(self::$caras); //guarda el indice aleatorio obtenido del array
-        $valorAleatorio = self::$caras[$indiceAleatorio]; //recoje la figura correspondiente a la posicion de $indiceAleatorio
+        $indiceAleatorio = array_rand($this->caras); //guarda el indice aleatorio obtenido del array
+        $valorAleatorio = $this->caras[$indiceAleatorio]; //recoje la figura correspondiente a la posicion de $indiceAleatorio
         self::$totalThrows++; // cada vez que haya una nueva tirada aumentara el valor de la variable en uno
 
         return $valorAleatorio;
