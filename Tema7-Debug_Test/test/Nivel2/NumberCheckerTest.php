@@ -1,9 +1,7 @@
-<!-- Programa un DataProvider para la clase Test del ejercicio 1 del nivel anterior y utilízalo.
- -->
 <?php
 declare(strict_types=1);
 
-require 'NumberChecker.php';
+require __DIR__ . '/../../src/Nivel2/NumberChecker.php';
 
 use PHPUnit\Framework\TestCase;
 

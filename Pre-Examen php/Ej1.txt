@@ -1,0 +1,17 @@
+A) La diferencia radica en que la clase es el molde desde donde se crean los objetos que hará que todos estos objetos sean creados de la misma manera, esto es con los mismo atributos y metodos. 
+
+B) Los atributos son las variables de la clase que recogeran los valores recibidos al instanciar un objeto. Los metodos son las funciones de la clase que afectarán a los objetos creados de la clase.
+
+C) Tenemos los modificadores de acceso:
+-public: se tiene acceso al atributo/metodo desde cualquier parte del codigo.
+-protected: se tiene acceso desde la misma clase y su herencia.
+-private: se tiene accesso solo desde la misma clase.
+
+D) Pueden ser de tipo: String, integer, boolean, float, chart, date
+
+E) para que las clases que herenda de la clase madre herende sus atributos y metodos perimitiendo ahorrar codigo, tiempo, haciendolo ademas mas escalable y poder detectar errores mas facilmente.
+
+
+
+
+

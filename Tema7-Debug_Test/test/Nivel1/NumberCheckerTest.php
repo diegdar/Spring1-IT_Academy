@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-require 'NumberChecker.php';
+require __DIR__ . '/../../src/Nivel1/NumberChecker.php';
 
 use PHPUnit\Framework\TestCase;
 

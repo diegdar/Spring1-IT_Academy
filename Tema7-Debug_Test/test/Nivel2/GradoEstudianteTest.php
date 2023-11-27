@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-require 'GradoEstudiante.php';
+require __DIR__ . '/../../src/Nivel2/GradoEstudiante.php';
 
 use PHPUnit\Framework\TestCase;
 
