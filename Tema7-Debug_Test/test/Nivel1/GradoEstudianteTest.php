@@ -1,12 +1,11 @@
 <?php
 declare(strict_types=1);
 
-require 'GradoEstudiante.php';
+require '../../src/Nivel1/GradoEstudiante.php';
 
 use PHPUnit\Framework\TestCase;
 
 class GradoEstudianteTest extends TestCase{
-
      public function testPrimeraDivision(){
         $grado = new GradoEstudiante(); //crea el objeto para utilizar el metodo gradoEstudiante()
 

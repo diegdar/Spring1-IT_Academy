@@ -1,4 +1,4 @@
-'.\Spring1-IT_Academy\Tema7-Debug_Test\Nivel1\Ej1\NumberChecker.php'<?php
+<?php
 class NumberChecker  {
 
 	public function __construct(private int $number){}
