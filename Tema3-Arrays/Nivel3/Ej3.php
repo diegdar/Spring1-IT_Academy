@@ -16,16 +16,14 @@ function encontrarPrimo(int $valor): bool{
     return $esPrimo; //devolvera true si nunca entra dentro del condicional 'if'
 }
 
-$suma=0;
-echo array_reduce($valores, function ($va1, $va2) {//**1º */
-    if (encontrarPrimo($va2)) {
-        global $suma;//**2º */
-        return $suma += $va2;
+
+echo array_reduce($valores, function ($suma, $valor) {//**1º */
+    if (encontrarPrimo($valor)) {
+        return $suma += $valor;
     } else{
-        return $va1;
+        return $suma;
     }
 });
 
-//**1º:  la función array_reduce() recorre el array  y en cada iteración toma un valor del array que lo guarda en $va2 y comprueba si es primo, si es asi lo sumará al valor aumulativo de $suma. 
+//**1º:  la función array_reduce() recorre el array  y en cada iteración toma un valor del array que lo guarda en $valor y comprueba si es primo, si es asi lo sumará al valor aumulativo de $suma. 
 
-//**2º: */ Para poder utilizar la variable $suma he tenido que declararla fuera de la función y hacerla global porque si se declaraba dentro de la funcion siempre reiniciaba al valor a 0 en cada iteración.

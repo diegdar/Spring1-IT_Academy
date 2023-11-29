@@ -7,8 +7,7 @@ Devuelva un array donde sólo estén los strings que tengan un numero par de car
 
 function caracteresPares(string $valor): bool{
 
-    $valorStr = strval($valor);
-    $cantValor = strlen($valorStr);
+    $cantValor = strlen($valor);
 
     if ($cantValor%2 == 0 ) {
         return true;
