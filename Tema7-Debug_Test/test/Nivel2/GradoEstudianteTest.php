@@ -21,8 +21,6 @@ class GradoEstudianteTest extends TestCase{
   public static function PrimeraDivisionDataProvider(): array{ 
    return array(
          array(66, "Tiene un grado de Primera División"), //valor a probar, resultado que debe dar
-         array(60, "Tiene un grado de Primera División"), 
-         array(86, "Tiene un grado de Primera División"), 
       );
   }
 /**

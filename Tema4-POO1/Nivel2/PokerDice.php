@@ -22,7 +22,6 @@ class PokerDice{
     public function getTotalThrows(){ 
         return self::$totalThrows;
     }
-    
 }
 
 function tirarCincoDados(){

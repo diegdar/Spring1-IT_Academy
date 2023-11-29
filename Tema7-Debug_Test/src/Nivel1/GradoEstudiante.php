@@ -11,6 +11,8 @@ Si la nota es menor a 33%, el estudiante reprobará. -->
 <?php
     class GradoEstudiante{
 
+        
+
         function gradoEstudiante($nota){
             if($nota < 0 || $nota > 100){
                 return "debe introducir un valor entre 0 y 100";
