@@ -9,5 +9,5 @@ abstract class Shape{
         $this->width = $ancho;
     }
 
-    abstract public function calculaArea();
+    abstract public function calcularArea();
 }
