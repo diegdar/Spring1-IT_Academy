@@ -1,6 +1,8 @@
 <?php
+namespace Figuras;
+require_once "Shape.php";
 
-require_once("Shape.php");
+use Figuras\Shape;
 
 class Rectangulo extends Shape{
 

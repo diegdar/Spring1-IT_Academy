@@ -1,3 +1,6 @@
+<!--b) Haz un programa que, dado un número entero positivo, devuelva la suma de sus digidos.
+Por ejemplo, dado 16, debe devolver 7, y, dado 532 debería devolver 10.  -->
+
 <?php
 function sumarDigitos(int $numero): int {
 

@@ -2,17 +2,21 @@
  -->
 <?php
 
-function mostrarPrimos(int $n): array {
+function mostrarPrimos(int $n): array
+{
     $numPrimos = [] ;
-    $esPrimo = true;
-    for ($i=$n; $i>1; $i--) { //$i sera el valor a anlizar si es primo
-        $esPrimo = true;
-        for ($j=2; $j<$i; $j++) { //$j sera el valor que dividirá a $i y si su residuo es 0 en alguna de las iteraciones es porque no es primo
-            if($i%$j == 0){
+    for ($i=$n; $i>1; $i--)
+    { //$i sera el valor a anlizar si es primo
+        $esPrimo = true; //cambiará el valor de false a true cuando termine todas iteraciones del 2º FOR
+        for ($j=2; $j<$i; $j++)
+        { //$j sera el valor que dividirá a $i y si su residuo es 0 en alguna de las iteraciones es porque no es primo
+            if($i%$j == 0)
+            {
                 $esPrimo = false;
             }
         }
-        if($esPrimo){
+        if($esPrimo)
+        {
             array_push($numPrimos, $i);
         }
     }

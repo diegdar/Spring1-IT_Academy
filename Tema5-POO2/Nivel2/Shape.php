@@ -1,5 +1,7 @@
 <?php
 
+namespace Figuras;
+
 abstract class Shape{
     protected float $height;
     protected float $width;

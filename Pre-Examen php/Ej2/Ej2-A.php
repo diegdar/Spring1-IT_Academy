@@ -1,6 +1,19 @@
+<!-- a) Escribe un programa que, dada una altura y un peso, nos devuelva su índice de
+masa corporal(IMC).EI IMC se calcula dividiendo el peso(en kg) entre el cuadrado de
+la altura(en metros). Debemos mostrar además, qué rango de IMC estamos:
+IMC
+Menos de 18.5
+18.5-24.9
+25-29.9
+Más de 30.0
+Rango Valor
+Bajo peso normal
+Normal
+Sobrepeso
+Obesidad -->
 <?php
 
-function IMC(float $alt, int $peso): string{
+function darIMC(float $alt, int $peso): string{
     $imc = $peso / ($alt**2);
 
     if($imc> 30){
@@ -18,5 +31,5 @@ function IMC(float $alt, int $peso): string{
 $altura = 1.5;
 $peso = 68;
 
-echo IMC($altura, $peso);
+echo darIMC($altura, $peso);
 
