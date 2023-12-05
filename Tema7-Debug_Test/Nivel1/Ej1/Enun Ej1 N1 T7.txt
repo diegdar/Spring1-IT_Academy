@@ -1,2 +1,0 @@
-Dada la clase NumberChecker programa los tests unitarios que hagan falta para certificar que el código fuente de la clase hace lo que debe hacer.
-

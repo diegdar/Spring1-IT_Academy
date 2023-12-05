@@ -42,16 +42,71 @@ Class Cine{
         //🗒️1º: !$peliMayorDuracion -> si el valor de la variable esta vacio(null) tomara el valor de la primera pelicula. Si no lo esta comprobará la segunda condicion y es si la siguiente pelicula tiene una duracion mayor a la guardada en la variable $peliMayorDuracion para asi esta reemplace su valor
     }
 
-    public function buscarDirector(string $nomDirector){
-        $peliEncontrada = null;
+    public function getPeliculas(){
+        $peliculasCine = [];
             foreach ($this->peliculas as $pelicula) {
-                if($nomDirector == $pelicula["director"]){
-                    $peliEncontrada = $pelicula;
-                    $peliEncontrada["nomCine"]=$this->nomCine; //**1 */
-            }
+            $peliculasCine = $pelicula;
+            $peliculasCine["nomCine"]=$this->nomCine; //**1 */
         }
-        return $peliEncontrada;
+        return $peliculasCine;
+        
         //🗒️1º: agrega el nombre asociativo del cine
     }
     
+
+    /**
+     * Get the value of nomCine
+     */ 
+    public function getNomCine()
+    {
+        return $this->nomCine;
+    }
+
+    /**
+     * Set the value of nomCine
+     *
+     * @return  self
+     */ 
+    public function setNomCine($nomCine)
+    {
+        $this->nomCine = $nomCine;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of poblacion
+     */ 
+    public function getPoblacion()
+    {
+        return $this->poblacion;
+    }
+
+    /**
+     * Set the value of poblacion
+     *
+     * @return  self
+     */ 
+    public function setPoblacion($poblacion)
+    {
+        $this->poblacion = $poblacion;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of peliculas
+     */ 
+
+    /**
+     * Set the value of peliculas
+     *
+     * @return  self
+     */ 
+    public function setPeliculas($peliculas)
+    {
+        $this->peliculas = $peliculas;
+
+        return $this;
+    }
 }

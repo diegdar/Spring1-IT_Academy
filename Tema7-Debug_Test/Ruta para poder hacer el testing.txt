@@ -1,7 +1,10 @@
 ***Para hacer el test Estando en la carpeta ...Spring1-IT_Academy\Tema7-Debug_Test:
 
+- vendor/bin/phpunit test/Nivel1/NumberCheckerTest.php
 - vendor/bin/phpunit test/Nivel1/GradoEstudianteTest.php
+
 - vendor/bin/phpunit test/Nivel2/NumberCheckerTest.php
+- vendor/bin/phpunit test/Nivel2/GradoEstudianteTest.php
 
 
 

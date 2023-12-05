@@ -16,7 +16,7 @@ class GradoEstudianteTest extends TestCase{
   protected function tearDown(): void{ //elimina el objeto para liberar recursos
       $this->gradoEstudiante = null;
   } 
-  // ⚠️Los metodos Setup() y teaDown : son útiles para garantizar que cada test se ejecute en un entorno limpio. Esto ayuda a evitar que los resultados de un test se vean afectados por los resultados de otro test.
+  // ⚠️Los metodos Setup() y tearDown : son útiles para garantizar que cada test se ejecute en un entorno limpio. Esto ayuda a evitar que los resultados de un test se vean afectados por los resultados de otro test.
 
   public static function PrimeraDivisionDataProvider(): array{ 
    return array(

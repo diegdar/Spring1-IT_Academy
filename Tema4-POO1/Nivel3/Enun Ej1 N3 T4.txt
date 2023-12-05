@@ -7,5 +7,5 @@ Para cada cine, mostrar la película con mayor duración.
 Implementa una función que busque por el nombre del director/a películas en diferentes cines. No hace falta repetir películas.
 Además, puedes aprovechar este ejercicio para trabajar una buena presentación con HTML+CSS que apoye la lógica.
 
-max(array_values($array))
+
 
