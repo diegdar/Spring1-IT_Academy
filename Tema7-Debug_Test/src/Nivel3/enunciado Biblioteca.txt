@@ -1,0 +1,14 @@
+Necesitamos crear un pequeño software para el tratamiento de información en una biblioteca. Por eso necesitamos representar la información de un libro, que tiene:
+
+    Un título
+    Un autor/autora
+    Un ISBN
+    Un género, que puede ser: Aventuras, Ciencia-ficción, Cuento, Novela Policial, Paranormal, Distopía, Fantástico.
+    nº. de páginas.
+Necesitamos almacenar el conjunto de libros y tener métodos que:
+
+    Añadan, borren y modifiquen un libro de la librería.
+    Permitan consultar libros por título, género, ISBN o autor.
+    Devolver libros grandes (más de 500 páginas).
+Desarrolla mediante TDD este programa para garantizar que cumple con todas las funcionalidades solicitadas por el enunciado.
+

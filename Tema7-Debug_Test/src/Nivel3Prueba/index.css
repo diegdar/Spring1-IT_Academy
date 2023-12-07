@@ -1,0 +1,35 @@
+*{
+    margin: 0.2em;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    background-color: beige;
+}
+.contenedor{
+    background-image: url(img/sala_cine.jpeg);
+    background-size: cover; 
+    background-position: center;
+    height: 300px;
+}
+h1{
+    color:red;
+    text-align: center;
+    font-size: 3em;
+}
+h2{
+    color: blue;
+}
+h3{
+    color: green;
+}
+.encabezado{
+    display: flex;
+}
+#logo{
+    width: 30%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
