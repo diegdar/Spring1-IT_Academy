@@ -18,7 +18,8 @@ class GradoEstudianteTest extends TestCase{
   } 
   // ⚠️Los metodos Setup() y tearDown : son útiles para garantizar que cada test se ejecute en un entorno limpio. Esto ayuda a evitar que los resultados de un test se vean afectados por los resultados de otro test.
 
-  public static function PrimeraDivisionDataProvider(): array{ 
+  public static function PrimeraDivisionDataProvider(): array
+  { 
    return array(
          array(66, "Tiene un grado de Primera División"), //valor a probar, resultado que debe dar
       );

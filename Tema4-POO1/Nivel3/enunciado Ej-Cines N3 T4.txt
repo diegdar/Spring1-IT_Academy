@@ -7,4 +7,10 @@ Para cada cine, mostrar la película con mayor duración.✅
 Implementa una función que busque por el nombre del director/a películas en diferentes cines. No hace falta repetir películas.✅
 Además, puedes aprovechar este ejercicio para trabajar una buena presentación con HTML+CSS que apoye la lógica.
 
+[XDebug]
+zend_extension=C:\xampp\php\ext\php_xdebug.dll
+xdebug.mode=debug
+xdebug.client_host = 127.0.0.1
+xdebug.client_port = 9003
+xdebug.start_with_request=trigger
 

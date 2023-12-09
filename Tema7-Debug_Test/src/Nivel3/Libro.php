@@ -22,7 +22,6 @@ enum genero{
     }
 }
 
-
 class Libro
 {
     protected string $titulo;
@@ -39,8 +38,6 @@ class Libro
         $this->genero = $genero;
         $this->numPaginas = $numPaginas;
     }
-
-
 
     /**
      * Get the value of titulo
