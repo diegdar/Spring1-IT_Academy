@@ -35,7 +35,7 @@ class Biblioteca{
     {
         $libros = $this->libros;//atributo array con los libros
         $esEliminado= false;
-        $longArray = count($this->libros);
+        $longArray = count($libros);
         $i = 0;
         while($i<$longArray && $esEliminado==false)
         { //si encuentra el libro para eliminar dejara de itererar
