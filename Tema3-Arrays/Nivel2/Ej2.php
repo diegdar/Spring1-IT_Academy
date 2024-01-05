@@ -1,45 +1,61 @@
-<!-- Crea un programa que liste las notas de los/as alumnos/as de una clase. Para eso deberemos utilizar un array asociativo donde la clave será el nombre de cada alumno. Cada alumno tendrá 5 notas (valoradas del 0 al 10).
-
-Además, crea una función que, dadas las notas de todos los alumnos/as, nos muestre tanto la media de la nota de cada alumno, como la nota media de la clase entera. -->
 <?php
-$notasAlumnos = [
-                    "Ana Nieto"=> array(3.5, 7.9, 6.8, 4.2, 8.5),
-                    "Mario Paredez"=> array(5.5, 9.2, 4.8, 4.2, 7.5),
-                    "Luis Ortiz"=> array(2.5, 3.9, 8.8, 4.2, 5.5),
-                    "Maria Ocampo"=> array(4, 2.7, 9.3, 4.9, 6.5),
-    ];
+/*Crea un programa que liste las notas de los/as alumnos/as de una clase. Por eso deberemos utilizar un array asociativo donde la clave será el nombre de cada alumno. Cada alumno tendrá 5 notas (valoradas del 0 al 10).
 
-    function listarNotas($array){
+Además, crea una función que, dadas las notas de todos los alumnos/as, nos muestre tanto la media de la nota de cada alumno, como la nota media de la clase entera.
+ */
 
-        foreach ($array as $alumno => $notas) {
-            echo "Las notas del alumno: " . $alumno . " son: "; //imprime el nombre de cada alumno
-            foreach ($notas as $nota) {
-                echo $nota . ", "; //imprime todas las notas de cada alumno
-            }
-            echo "<br>";
+$notas = [
+    "Manuel"=>[3.5, 7, 4, 9, 7],
+    "Andres"=>[7.3, 3.4, 8.7, 6.4, 7.3],
+    "Ana"=>[5.9, 3.2, 8.6, 3.2, 6.9]
+];
+
+
+print_r($notasDecimales);
+function listarNotas(array $notas)
+{
+    foreach ($notas as $nom_alumno => $notas_alumno) {
+        echo"Las notas del alumno/a {$nom_alumno} son: ";
+
+        foreach ($notas_alumno as $key => $nota) {
+            echo"\n" . $nota;
+        
         }
+        echo"\n\n";
+    }
+}
+
+function mostrarNotaMediaAlumno($array)
+{   
+
+    define("NUMERO_NOTAS", 5);
+    $numAlumnos = count($array);
+
+    $sumaNotasClase=0;
+    $mediaAlumno=0;
+    echo"***NOTA MEDIA ALUMNOS:";
+    foreach ($array as $key => $notasAlumno) {
+        $mediaAlumno= array_reduce($notasAlumno, fn($acumulador, $valor)=>($acumulador+$valor))/NUMERO_NOTAS;
+        $sumaNotasClase += $mediaAlumno;
+
+        echo "\n La media del alumno {$key} es: {$mediaAlumno} ";
     }
 
-    function mediaNotas($array){
-        $sumNotasAlumno=0;
-        $sumNotasClase=0;
-        define("NUM_NOTAS", 5);
+    echo"\n\n***NOTA MEDIA CLASE:";
+    echo "\n La nota media de la clase es: " . round(($sumaNotasClase/$numAlumnos), 2);
 
-        foreach ($array as $alumno => $notas) {
-            $sumNotasAlumno = 0; // Reinicia la variable en cada iteración para el siguiente alumno
-            echo "Las nota media del alumno: " . $alumno . " es: ";
-            foreach ($notas as $nota) {
-                $sumNotasAlumno += $nota; //Acumula las notas del alumno actual
-            }
-            echo $sumNotasAlumno/NUM_NOTAS . "<br>";
-            $sumNotasClase += $sumNotasAlumno; //Acumula las notas de cada alumno para calcular la media de la clase 
-        }
-        echo "La nota media de la clase es: " . $sumNotasClase/count($array)/NUM_NOTAS . "<br>"; //imprime la media de la clase: suma total de las notas de la clase entre el numero de estudiantes y el numero de notas
+}
 
-    }
+// print_r(listarNotas($notas));
+// print_r(mostrarNotaMediaAlumno($notas));
+// -----------------------------------
+/*
+***MEDIA ALUMNOS:
+ La media del alumno Manuel es: 6.1 
+ La media del alumno Andres es: 6.62 
+ La media del alumno Ana es: 5.56 
 
-    listarNotas($notasAlumnos);
+***MEDIA CLASE:
+ La nota media de la clase es: 6.09
+ */
 
-    echo "<br>";
-
-    mediaNotas($notasAlumnos);

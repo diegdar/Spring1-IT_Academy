@@ -1,22 +1,27 @@
-<!-- Dado un array de strings, haz un programa que:
-
+<?php
+/*Dado un array de strings, haz un programa que:
 Devuelva un array donde sólo estén los strings que tengan un numero par de caracteres usando la función  array_filter()
--->
+ */
 
-<?php 
+ $nombres = [3=>"ana", 5=>"Maria", 4=>"Luis"];
 
-function caracteresPares(string $valor): bool{
+$nomsPares = array_filter($nombres, 'buscarNomsPares');
 
-    $cantValor = strlen($valor);
+function buscarNomsPares($nombre)
+{
+    // if((strlen($nombre)%2) == 0) //si el modulo de 2 de la longitud del nombre es 0 es por es par
+    // {
+    //     return $nombre;
+    // }
 
-    if ($cantValor%2 == 0 ) {
-        return true;
-    } else {
-        return false;
-    }
+// EN OPERADOR TERNARIO
+    return (strlen($nombre) % 2 == 0) ? $nombre : null; //si el modulo de 2 de la longitud del nombre es 0 es por es par
 }
 
-$nombres = ["luna", "rodri", "perro", "sol", "cuadro", "un"];
 
-print_r(array_filter($nombres, "caracteresPares"));
+print_r($nomsPares);
+// -----------------------------------
+/*
+
+ */
 
