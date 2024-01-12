@@ -15,8 +15,10 @@ $biblioteca->agregarLibro($libro3);
 $biblioteca->agregarLibro($libro4);
     // var_dump($biblioteca->getLibros());
 
+    
+
 // echo $biblioteca->borrarLibro("La isla del tesoro");
-    // var_dump($biblioteca->buscarLibro("Ciencia Ficción"));
+    // $biblioteca->buscarLibro(genero::CIENCIAFICCION);
 
 // echo $biblioteca->modificarLibro("La isla del tesoro", campoModificar::AUTOR, "Prueba autor");
     // var_dump($biblioteca->getLibros());

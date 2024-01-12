@@ -15,8 +15,7 @@ class CadenaCines{
 
     public function mostrarpeliculas(): void
     {
-        foreach ($this->cines as $cine) {
-            
+        foreach ($this->cines as $cine) {          
             echo "<h2>El cine {$cine->getNomCine()} en  {$cine->getPoblacion()} tiene las siguientes peliculas: </h2>";
             foreach($cine->getPeliculas() as $pelicula)
             {//getPeliculas() nos da el array con las peliculas del cine en la iteracion actual
@@ -50,7 +49,7 @@ class CadenaCines{
         }
     }
 
-    public function BuscarPeliDirector(string $nomDirector):void
+    public function BuscarPeliDirector(string $directorBuscar):void
     {
         $nomsPeliculas= [];
         $pelisEncontradas= [];
@@ -58,11 +57,11 @@ class CadenaCines{
         {
             $peliculas = $cine->getPeliculas();
             foreach($peliculas as $pelicula)
-            {//getPeliculas() nos da el array con las peliculas del cine en la iteracion actual
-                if($pelicula["director"]==$nomDirector && !in_array($pelicula["titulo"], $nomsPeliculas))
+            {                                                       //si el nombre de la pelicula aun no se ha guardado en el array $nomsPeliculas
+                if($pelicula["director"]==$directorBuscar && !in_array($pelicula["titulo"], $nomsPeliculas))
                 { //Entrara si la pelicula actual es igual al nombre del director que buscamos Y no este dentro de los titulos de peliculas guardados en el array $nomsPeliculas
                     $nomsPeliculas []= $pelicula["titulo"];
-                    $pelicula["nomCine"]= $cine->getNomCine(); //nos permite agregar al array el nombre del cine
+                    $pelicula["nomCine"]= $cine->getNomCine(); //nos permite agregar al array el nombre del cine donde esta la pelicula encontrada 
                     $pelisEncontradas []= $pelicula ;
                 }
             }
@@ -71,7 +70,7 @@ class CadenaCines{
 
         if(!empty($pelisEncontradas))
         {
-            echo "<h2>Encontramos en los siguientes cines las peliculas del director $nomDirector: </h2><br><br>" ;
+            echo "<h2>Encontramos en los siguientes cines las peliculas del director $directorBuscar: </h2><br><br>" ;
             foreach ($pelisEncontradas as $pelicula)
             {
                 echo "<h3>Cine '{$pelicula["nomCine"]}' tiene la(s) siguiente(s) pelicula(s): </h3>";
@@ -84,7 +83,7 @@ class CadenaCines{
             }
         }else
         {
-            echo "No tenemos peliculas con el director $nomDirector";
+            echo "No tenemos peliculas con el director $directorBuscar";
         }
 
     }

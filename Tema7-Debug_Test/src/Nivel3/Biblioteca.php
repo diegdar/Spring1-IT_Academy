@@ -56,7 +56,7 @@ class Biblioteca{
         }
     }
 
-    function buscarLibro(string $valorBuscado): array |string //debe devolverser un array o un string
+    function buscarLibro($valorBuscado) //debe devolverser un array o un string
     {
         $libros = $this->libros; //atributo array con los libros
         $longArray = count($this->libros);
@@ -67,7 +67,7 @@ class Biblioteca{
                 $libros[$i]->getTitulo() == $valorBuscado ||
                 $libros[$i]->getAutor() == $valorBuscado ||
                 $libros[$i]->getIsbn() == $valorBuscado ||
-                $libros[$i]->getGenero()->generos() == $valorBuscado)
+                $libros[$i]->getGenero()==$valorBuscado->generos())
                 {
                     $librosEncontrados[]=$libros[$i]; //Si hay alguna coincidencia agregara el libro encontrado al array $librosEncontrados
                 }
@@ -75,7 +75,14 @@ class Biblioteca{
         }
             if(!empty($librosEncontrados))
             {//Si el array no esta vacio es porque encontro al menos un libro con el valor buscado
-                return $librosEncontrados;
+                foreach ($librosEncontrados as $key => $libro)
+                {
+                    echo "Titulo: {$libro->getTitulo()}\n";
+                    echo "Autor: {$libro->getAutor()}\n";
+                    echo "ISBN: {$libro->getIsbn()}\n";
+                    echo "GENERO: {$libro->getGenero()}\n";
+                    echo "Numero de páginas: {$libro->getNumPaginas()}\n\n";    
+                }
             }else
             {
                 return "No tenemos ningun libro por el valor buscado: '$valorBuscado' ";

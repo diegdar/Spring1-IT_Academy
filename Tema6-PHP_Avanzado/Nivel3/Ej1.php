@@ -95,12 +95,20 @@ class RecursoDidactico
     {
         $this->recurso = $recurso;
     }
+
+    public function __toString()
+    {
+        return "El recurso elegido es " . $this->nombre .  " con el tema " . $this->tema->temas() . " y recurso " .  $this->recurso->recursos();
+    }
+
 }
 
 $recursoDidactico1 = new RecursoDidactico("Especializacion en PHP", Tema::PHP, "https://www.php.net/manual/es/", recurso::ARTICULO);
+// echo $recursoDidactico1;
 
 echo "Nombre: " . $recursoDidactico1->getNombre() . "<br>";
 echo "Tema: " . $recursoDidactico1->getTema()->temas() . "<br>";
 echo "Url: " . $recursoDidactico1->getUrl() . "<br>";
 echo "Recurso: " . $recursoDidactico1->getRecurso()->recursos() . "<br>";
+
 

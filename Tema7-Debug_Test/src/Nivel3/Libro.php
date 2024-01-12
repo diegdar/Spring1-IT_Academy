@@ -104,7 +104,7 @@ class Libro
      */ 
     public function getGenero()
     {
-        return $this->genero;
+        return $this->genero->generos();
     }
 
     /**
